@@ -1,0 +1,14 @@
+AddDefaultCharset utf-8
+
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/json application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+RewriteEngine on
+# If a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Otherwise forward it to index.php
+RewriteRule . index.php
