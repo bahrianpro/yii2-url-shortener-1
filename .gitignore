@@ -1,0 +1,19 @@
+# Composer
+# =========================
+/vendor
+composer.phar
+
+# Node_modules
+# =========================
+/node_modules
+
+# Vagrant
+# =========================
+/.vagrant
+
+# phpunit
+# =========================
+phpunit.phar
+/phpunit.xml
+tests/_output/*
+tests/_support/_generated
